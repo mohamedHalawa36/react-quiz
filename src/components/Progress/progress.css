@@ -1,0 +1,9 @@
+#prog-bar{ 
+    color: var(--color-light);
+    height: 7.5px;
+    width: 100%;
+    background-color: black;
+}
+#prog-bar>#real-prog{
+    background-color: var(--color-theme);
+}

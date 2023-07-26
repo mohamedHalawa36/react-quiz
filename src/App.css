@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+:root {
+  --color-darkest: #343a40;
+  --color-dark: #495057;
+  --color-medium: #ced4da;
+  --color-light: #f1f3f5;
+
+  --color-theme: #1098ad;
+  --color-accent: #ffa94d;
+}
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+
+body {
+  background-color: var(--color-darkest);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  padding: 6px 20px !important;
+  background-color: var(--color-dark) !important;
+  color: var(--color-light) !important;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.btn:hover {
+  background-color: var(--color-darkest) !important;
+  border: 1px solid var(--color-dark) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn.option,
+.btn.option:disabled {
+  border: 1px solid transparent;
+  margin: 12px 0px;
+  font-size: 17px;
+  padding-top: 12px !important ;
+  padding-bottom: 12px !important ;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.btn.option:hover,
+.btn.option.answer {
+  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  -o-transform: translateX(20px);
+}
+.btn.timer-btn,
+.btn.timer-btn:disabled {
+  background-color: var(--color-darkest) !important;
+  border: 1px solid var(--color-light) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#finish-section {
+  background-color: var(--color-theme);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 576px) {
+  #start-section > .welcome {
+    font-size: 27px !important;
   }
 }
